@@ -8,7 +8,7 @@
 html,
 body {
   height: 100%;
-  overflow: hidden;
+  overflow: hidden auto;
   font-family: 'Open Sans';
   letter-spacing: -0.03em;
 }
@@ -31,6 +31,7 @@ input[type='password']:disabled,
 input[type='date']:disabled {
   background: #f6f5f5;
   border: 0.5px solid #dcdcdc;
+  border-radius: 3px !important;
   outline: none;
   color: #626264;
 }
@@ -59,4 +60,11 @@ input[type='date']:disabled {
   border-radius: 5px;
   display: inline-block;
   padding: 50px;
+}
+
+.title-form-checkout {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: var(--primary);
+  padding-bottom: 5px;
 }
