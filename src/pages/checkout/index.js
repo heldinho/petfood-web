@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Header from '../../components/header'
+import ImgProduct from '../../assets/product.png'
 
 export default function checkout() {
   return (
@@ -134,10 +135,10 @@ export default function checkout() {
             {/* Botão finalizar */}
             <div className="row mb-5">
               <div className="col-12 p-1">
-                <div className="row">
+                <div className="row mb-3">
                   <div className="col-12 d-flex justify-content-between">
                     <span>Total:</span>
-                    <span>R$ 79,90</span>
+                    <span className="amount-total">R$ 79,90</span>
                   </div>
                 </div>
                 <div className="row">
@@ -150,6 +151,41 @@ export default function checkout() {
               </div>
             </div>
           </div>
+
+          {/* Box minha sacola */}
+          <div className="col-6">
+            <div className="row">
+              <div className="col-12 container-bag">
+                <div className="box-bag">
+                  <div className="row">
+                    <div className="col-12 p-1 mb-3">
+                      <span className="label-count-bag">Minha Sacola (4)</span>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-12">
+                      {[1, 2, 3, 4].map((item) => (
+                        <div className="box-product">
+                          <img src={ImgProduct} />
+                          <div className="d-flex flex-column">
+                            <div className="amount">$4,90</div>
+                            <strong className="product-description-bag">
+                              Ração Magnus Todo Dia Sabor Carne para Cães
+                              Adultos - 15 Kg
+                            </strong>
+                          </div>
+                          <div className="d-flex justify-content-center align-items-center">
+                            <button className="product-remove-bag">-</button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* End box minha sacola */}
         </div>
       </div>
     </div>
