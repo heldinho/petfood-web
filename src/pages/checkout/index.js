@@ -1,6 +1,8 @@
 import React from 'react'
 
 import Header from '../../components/header'
+import ProductList from '../../components/product/list'
+
 import ImgProduct from '../../assets/product.png'
 
 export default function checkout() {
@@ -15,7 +17,9 @@ export default function checkout() {
               <div className="col-12">
                 <div className="row mb-3">
                   <div className="col-12 pl-1">
-                    <span class="title-form-checkout">Dados de Entrega</span>
+                    <strong className="title-form-checkout">
+                      Dados de Entrega
+                    </strong>
                   </div>
                 </div>
                 <div className="row">
@@ -83,9 +87,9 @@ export default function checkout() {
               <div className="col-12">
                 <div className="row mb-3">
                   <div className="col-12 pl-1">
-                    <span className="title-form-checkout">
+                    <strong className="title-form-checkout">
                       Dados de Pagamento
-                    </span>
+                    </strong>
                   </div>
                 </div>
                 <div className="row">
@@ -137,13 +141,13 @@ export default function checkout() {
               <div className="col-12 p-1">
                 <div className="row mb-3">
                   <div className="col-12 d-flex justify-content-between">
-                    <span>Total:</span>
-                    <span className="amount-total">R$ 79,90</span>
+                    <strong>Total:</strong>
+                    <strong className="amount-total">R$ 79,90</strong>
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-12">
-                    <button className="btn btn-lg btn-block btn-primary">
+                    <button className="btn btn-lg btn-block btn-primary font-weight-bold">
                       Finalizar Compra
                     </button>
                   </div>
@@ -159,25 +163,15 @@ export default function checkout() {
                 <div className="box-bag">
                   <div className="row">
                     <div className="col-12 p-1 mb-3">
-                      <span className="label-count-bag">Minha Sacola (4)</span>
+                      <strong className="label-count-bag">
+                        Minha Sacola ({[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].length})
+                      </strong>
                     </div>
                   </div>
                   <div className="row">
                     <div className="col-12">
-                      {[1, 2, 3, 4].map((item) => (
-                        <div className="box-product">
-                          <img src={ImgProduct} />
-                          <div className="d-flex flex-column">
-                            <div className="amount">$4,90</div>
-                            <strong className="product-description-bag">
-                              Ração Magnus Todo Dia Sabor Carne para Cães
-                              Adultos - 15 Kg
-                            </strong>
-                          </div>
-                          <div className="d-flex justify-content-center align-items-center">
-                            <button className="product-remove-bag">-</button>
-                          </div>
-                        </div>
+                      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+                        <ProductList key={item} />
                       ))}
                     </div>
                   </div>
@@ -185,7 +179,6 @@ export default function checkout() {
               </div>
             </div>
           </div>
-          {/* End box minha sacola */}
         </div>
       </div>
     </div>

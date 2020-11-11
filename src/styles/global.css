@@ -92,10 +92,12 @@ input[type='date']:disabled {
 
 .box-bag {
   width: 500px;
+  max-height: 600px;
   background: #fff;
   box-shadow: 0px 0px 11px 6px rgba(0, 0, 0, 0.06);
   border-radius: 5px;
   padding: 35px;
+  overflow: hidden auto;
 }
 
 .label-count-bag {
@@ -142,10 +144,12 @@ input[type='date']:disabled {
   border-style: none;
   color: #fff;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
   border-radius: 50%;
   outline: none !important;
   margin-left: 14px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .box-product .product-remove-bag:active {
