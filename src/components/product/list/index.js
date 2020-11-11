@@ -12,14 +12,7 @@ export default function ProductList() {
       <img src={ImgProduct} />
       <div className="d-flex flex-column">
         <div className="amount">$4,90</div>
-        <strong
-          className="product-description-bag text-truncate"
-          style={{ width: 280 }}
-          data-toggle="tooltip"
-          data-placement="top"
-          title="Ração Úmida Nestlé Purina Dog Chow Extra Life Sachê Carne para Cães
-          Filhotes - 100 g"
-        >
+        <strong className="product-description-bag">
           Ração Úmida Nestlé Purina Dog Chow Extra Life Sachê Carne para Cães
           Filhotes - 100 g
         </strong>
