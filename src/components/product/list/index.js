@@ -9,7 +9,7 @@ export default function ProductList() {
 
   return (
     <div className="box-product">
-      <img src={ImgProduct} />
+      <img src={ImgProduct} className="img-fluid" />
       <div className="d-flex flex-column">
         <div className="amount">$4,90</div>
         <strong className="product-description-bag">
