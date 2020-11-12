@@ -202,10 +202,17 @@ input[type='date']:disabled {
   border-radius: 6px;
 }
 
-.box-grid-product:hover .product-quickview {
+.box-grid-product:hover .product-quickview,
+.box-grid-product:hover .btn-prev {
   left: 0px;
   transition: left 300ms ease-in-out;
   -webkit-transition: left 300ms ease-in-out;
+}
+
+.box-grid-product:hover .btn-next {
+  right: 0px;
+  transition: right 300ms ease-in-out;
+  -webkit-transition: right 300ms ease-in-out;
 }
 
 .product-quickview {
@@ -290,4 +297,112 @@ input[type='date']:disabled {
   border-radius: 4px;
   font-weight: 600;
   font-size: 16px;
+}
+
+.info-store {
+  cursor: pointer;
+  border: 0px solid;
+  padding: 5px;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.info-store:hover {
+  background: #182135;
+  color: #fff;
+}
+
+/* Slide */
+
+.btn-slide {
+  outline: none !important;
+}
+
+.btn-prev {
+  position: absolute;
+  left: -26px;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  padding: 0px;
+  margin: 0px;
+  transform: translateY(-50%);
+  transition: left 300ms ease-in-out;
+  -webkit-transition: left 300ms ease-in-out;
+}
+
+.btn-prev span {
+  border: 0px solid;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 28px;
+}
+
+.btn-prev:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.btn-next {
+  position: absolute;
+  right: -26px;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  padding: 0px;
+  margin: 0px;
+  transform: translateY(-50%);
+  transition: right 300ms ease-in-out;
+  -webkit-transition: right 300ms ease-in-out;
+}
+
+.btn-next span {
+  border: 0px solid;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 28px;
+}
+
+.btn-next:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }

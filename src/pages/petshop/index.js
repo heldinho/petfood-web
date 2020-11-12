@@ -15,8 +15,9 @@ export default function Petshop() {
       <div className="container-fluid mx-4 mb-4">
         <div className="row">
           <div className="col-2">
-            <div>
+            <div style={{position: 'relative'}}>
               <img src={ImgCompany} className="img-fluid w-100" />
+              <span className="info-store material-icons">store</span>
             </div>
             <div className="title-company d-flex justify-content-between">
               <strong>Petlove</strong>
