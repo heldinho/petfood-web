@@ -1,17 +1,36 @@
 import React from 'react'
 
-import ImgProduct from '../../../assets/Image.png'
 import star from '../../../assets/star.png'
 
+import img1 from '../../../assets/products/img1.jpg'
+import img2 from '../../../assets/products/img2.jpg'
+import img3 from '../../../assets/products/img3.jpg'
+import img4 from '../../../assets/products/img4.jpg'
+
 export default function ProductList() {
-  const [slideIndex, setSlideIndex] = React.useState(0)
+  const [slideIndex, setSlideIndex] = React.useState(1)
+
+  const Images = [
+    { slide: 1, img: img1 },
+    { slide: 2, img: img2 },
+    { slide: 3, img: img3 },
+    { slide: 4, img: img4 }
+  ]
 
   function nextSlide() {
-    setSlideIndex(slideIndex++)
+    if (slideIndex >= Images.length) {
+      setSlideIndex(1)
+    } else {
+      setSlideIndex(slideIndex + 1)
+    }
   }
 
   function prevSlide() {
-    setSlideIndex(slideIndex--)
+    if (slideIndex <= 1) {
+      setSlideIndex(Images.length)
+    } else {
+      setSlideIndex(slideIndex - 1)
+    }
   }
 
   function showSlide() {
@@ -25,12 +44,18 @@ export default function ProductList() {
     }
   }
 
-  showSlide()
-
   return (
     <div className="box-grid-product">
       <div className="box-grid-product-img">
-        <img src={ImgProduct} />
+        {Images.map((image) => (
+          <img
+            src={image.img}
+            className={
+              image.slide === slideIndex ? 'img-fluid active' : 'img-fluid'
+            }
+            key={image.slide}
+          />
+        ))}
 
         {/* <div className="mySlides fade">
           <img src={ImgProduct} />
@@ -42,10 +67,10 @@ export default function ProductList() {
           <img src={ImgProduct} />
         </div> */}
 
-        <button className="btn-slide btn-prev">
+        <button className="btn-slide btn-prev" onClick={() => prevSlide()}>
           <span className="material-icons">keyboard_arrow_left</span>
         </button>
-        <button className="btn-slide btn-next">
+        <button className="btn-slide btn-next" onClick={() => nextSlide()}>
           <span className="material-icons">keyboard_arrow_right</span>
         </button>
 
