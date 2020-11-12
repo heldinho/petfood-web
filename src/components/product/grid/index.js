@@ -11,6 +11,9 @@ export default function ProductList() {
         <button className="btn-add-product">
           <span>+</span>
         </button>
+        <button className="product-quickview">
+          <span class="material-icons">remove_red_eye</span>
+        </button>
         <span className="product-sales badge badge-danger">-30% Off</span>
         <span className="product-new badge badge-info">Novo</span>
       </div>
