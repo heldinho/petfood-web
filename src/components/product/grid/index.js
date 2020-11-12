@@ -11,6 +11,7 @@ export default function ProductList() {
         <button className="btn-add-product">
           <span>+</span>
         </button>
+        <span className="product-sales badge badge-danger">-30% Off</span>
       </div>
       <div>
         <div className="d-flex justify-content-between mt-3 mb-2">

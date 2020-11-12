@@ -216,6 +216,7 @@ input[type='date']:disabled {
   border: none;
   font-size: 28px;
   outline: none !important;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 .btn-add-product:active {
@@ -223,6 +224,17 @@ input[type='date']:disabled {
 }
 .btn-add-product:hover {
   background-color: var(--primary-hover);
+}
+
+.product-sales {
+  position: absolute;
+  top: 0px;
+  padding: 8px 15px;
+  font-weight: 600;
+  font-size: 14px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 .box-grid-product .amount {
