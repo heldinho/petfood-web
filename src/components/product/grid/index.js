@@ -12,6 +12,7 @@ export default function ProductList() {
           <span>+</span>
         </button>
         <span className="product-sales badge badge-danger">-30% Off</span>
+        <span className="product-new badge badge-dark">Novo</span>
       </div>
       <div>
         <div className="d-flex justify-content-between mt-3 mb-2">

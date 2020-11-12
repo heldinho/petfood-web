@@ -237,6 +237,18 @@ input[type='date']:disabled {
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
+.product-new {
+  position: absolute;
+  top: 0px;
+  right: -3px;
+  padding: 8px 15px;
+  font-weight: 600;
+  font-size: 14px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
 .box-grid-product .amount {
   width: fit-content;
   background: rgba(80, 62, 157, 0.1);
