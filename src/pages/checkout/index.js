@@ -3,9 +3,12 @@ import React from 'react'
 import Header from '../../components/header'
 import Product from '../../components/product/list'
 
-import ImgProduct from '../../assets/product.png'
+export default function Checkout() {
 
-export default function checkout() {
+  const products = [
+
+  ]
+
   return (
     <div className="h-100">
       <Header />

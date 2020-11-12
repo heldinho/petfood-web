@@ -2,6 +2,8 @@
 
 :root {
   --primary: #06d6a0;
+  --primary-active: #2ee7b6;
+  --primary-hover: #0b9973;
   --secondary: #fa643d;
   --secondary-active: #f1927a;
   --secondary-hover: #eb4e26;
@@ -9,10 +11,12 @@
 
 html,
 body {
+  display: block;
   height: 100%;
   overflow: hidden auto;
   font-family: 'Open Sans';
   letter-spacing: -0.03em;
+  outline: none !important;
 }
 
 input[type='text'],
@@ -121,11 +125,10 @@ input[type='date']:disabled {
 }
 
 .box-product .amount {
+  width: fit-content;
   background: rgba(80, 62, 157, 0.1);
   color: #503e9d;
-  text-align: center;
-  width: 55px;
-  padding: 2px 0px;
+  padding: 2px 12px;
   margin-bottom: 8px;
   border-radius: 4px;
   font-weight: 600;
@@ -160,4 +163,76 @@ input[type='date']:disabled {
 .box-product .product-remove-bag:hover {
   background: var(--secondary-hover);
   border-color: var(--secondary-hover);
+}
+
+.title-company {
+  margin: 12px 0px;
+}
+
+.info-company {
+  margin: 8px 0px;
+}
+
+.info-company span {
+  color: #626264;
+}
+
+.free-shipping {
+  background: rgba(80, 62, 157, 0.1);
+  color: #503e9d;
+  text-align: center;
+  width: 100px;
+  padding: 3px 0px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.box-grid-product {
+  width: 253px;
+  height: 360px;
+  margin: 0px 20px 80px 20px;
+}
+
+.box-grid-product-img {
+  position: relative;
+}
+
+.box-grid-product-img img {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+}
+
+.btn-add-product {
+  position: absolute;
+  right: 12px;
+  bottom: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  font-size: 28px;
+  outline: none !important;
+}
+
+.btn-add-product:active {
+  background-color: var(--primary-active) !important;
+}
+.btn-add-product:hover {
+  background-color: var(--primary-hover);
+}
+
+.box-grid-product .amount {
+  width: fit-content;
+  background: rgba(80, 62, 157, 0.1);
+  color: #503e9d;
+  text-align: center;
+  padding: 2px 12px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
 }

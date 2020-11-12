@@ -5,14 +5,14 @@ import Illustration from '../../assets/illustration.png'
 
 const Cadastro = () => {
   return (
-    <div className="container-fluid h-100 bg-primary">
+    <div className="container-fluid bg-primary" style={{ height: '100%' }}>
       <Header whiteVersion />
       <div className="row">
         <div className="col-6 text-right my-auto">
           <img src={Illustration} className="img-fluid" />
         </div>
         <div className="col-6">
-          <div className="box col-8">
+          <div className="box">
             <h2 className="text-center">
               Falta pouco pra fazer o seu pet feliz.
             </h2>
