@@ -14,7 +14,7 @@ export default function ModalProduct() {
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id="staticBackdropLabel">
-              Modal title
+              Titulo do Produto
             </h5>
             <button
               type="button"
@@ -25,7 +25,7 @@ export default function ModalProduct() {
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div className="modal-body">...</div>
+          <div className="modal-body">Informações do Produto</div>
           <div className="modal-footer">
             <button
               type="button"

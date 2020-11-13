@@ -80,7 +80,7 @@ export default function ProductList() {
         <button
           className="product-quickview"
           data-toggle="modal"
-          data-target="#modal-company"
+          data-target="#modal-product"
         >
           <span className="material-icons">remove_red_eye</span>
         </button>
