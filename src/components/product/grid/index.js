@@ -77,7 +77,11 @@ export default function ProductList() {
         <button className="btn-add-product">
           <span>+</span>
         </button>
-        <button className="product-quickview">
+        <button
+          className="product-quickview"
+          data-toggle="modal"
+          data-target="#modal-company"
+        >
           <span className="material-icons">remove_red_eye</span>
         </button>
         <span className="product-sales badge badge-danger">-30% Off</span>
