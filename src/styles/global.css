@@ -43,6 +43,10 @@ input[type='date']:disabled {
   color: #626264;
 }
 
+.close {
+  outline: none !important;
+}
+
 .btn {
   font-size: 15px;
   box-shadow: none !important;
