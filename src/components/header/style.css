@@ -4,3 +4,15 @@ header.no-white-version {
   border-bottom-color: #e5e5e5;
   background: #fff;
 }
+
+.navbar-icon-bag {
+  position: relative;
+  padding: 10px;
+  border-radius: 50%;
+  float: right;
+}
+
+.navbar-icon-bag:hover {
+  background: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}

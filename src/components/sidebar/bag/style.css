@@ -1,0 +1,10 @@
+.container-bag {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background: #000;
+  width: 600px;
+  height: 100%;
+  z-index: 1051;
+  right: 0;
+}
