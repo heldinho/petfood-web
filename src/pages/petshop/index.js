@@ -56,7 +56,7 @@ export default function Petshop() {
             </div>
             <div className="row">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
-                <Product key={item} />
+                <Product key={item} isNew={true} isSales={true} />
               ))}
             </div>
           </div>

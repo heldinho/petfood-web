@@ -7,8 +7,10 @@ import img2 from '../../../assets/products/img2.jpg'
 import img3 from '../../../assets/products/img3.jpg'
 import img4 from '../../../assets/products/img4.jpg'
 
-export default function ProductList() {
+export default function ProductList(props) {
   const [slideIndex, setSlideIndex] = React.useState(1)
+
+  const { isSales, isNew } = props
 
   const Images = [
     { slide: 1, img: img1 },
@@ -84,8 +86,19 @@ export default function ProductList() {
         >
           <span className="material-icons">remove_red_eye</span>
         </button>
-        <span className="product-sales badge badge-danger">-30% Off</span>
-        <span className="product-new badge badge-info">Novo</span>
+
+        {
+          isSales ?
+            <span className="product-sales badge badge-danger">-30% Off</span>
+          : false
+        }
+
+        {
+          isNew ?
+            <span className="product-new badge badge-info">Novo</span>
+          : false
+        }
+
       </div>
       <div>
         <div className="d-flex justify-content-between mt-3 mb-2">
