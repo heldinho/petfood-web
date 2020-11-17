@@ -47,7 +47,7 @@
 }
 
 .container-bag .header-bag {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid #F6F5F5;
   display: flex;
   justify-content: space-around;
   padding: 20px 0px;
