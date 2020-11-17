@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
-:root {
-  --primary: #06d6a0;
-  --primary-active: #2ee7b6;
-  --primary-hover: #0b9973;
-  --secondary: #fa643d;
-  --secondary-active: #f1927a;
-  --secondary-hover: #eb4e26;
-}
+@import url('./variables.css');
 
 html,
 body {
