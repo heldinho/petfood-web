@@ -6,6 +6,11 @@ import './style.css'
 
 export default function Bag() {
   const [open, setOpen] = React.useState(false)
+  React.useEffect(() => {
+    window.addEventListener('openCart', () => {
+      setOpen(true)
+    })
+  }, [])
 
   return (
     <div className={open ? 'container-bag show-header-cart' : 'container-bag'}>
@@ -13,7 +18,7 @@ export default function Bag() {
         <div className="header-bag">
           <div className="total-count-product">Minha Sacola (4)</div>
           <span
-            class="material-icons close-icon-bag"
+            className="material-icons close-icon-bag"
             onClick={() => setOpen(false)}
           >
             close
@@ -21,7 +26,7 @@ export default function Bag() {
         </div>
         <div className="list-products-bag">
           {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item) => (
-            <Product />
+            <Product key={item} />
           ))}
         </div>
         <div className="amount-bag">
@@ -35,10 +40,7 @@ export default function Bag() {
         <div className="btn-checkout-bag">
           <strong>Finalizar Compra</strong>
         </div>
-        <div
-          className="btn-open-sidebar-bag"
-          onClick={() => setOpen(!open)}
-        >
+        <div className="btn-open-sidebar-bag" onClick={() => setOpen(!open)}>
           <span className="material-icons">shopping_bag</span>
         </div>
       </div>
