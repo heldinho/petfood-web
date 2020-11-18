@@ -4,7 +4,7 @@ import ImgProduct from '../../../assets/product.png'
 
 export default function ProductList() {
   React.useEffect(() => {
-    console.log('useEffect')
+    // console.log('useEffect')
   }, [])
 
   return (
