@@ -1,0 +1,52 @@
+/* petsho company */
+.petshop .box-image {
+  position: relative;
+  width: 110px;
+}
+
+.petshop .box-image .img-fluid {
+  border-radius: 5px;
+}
+
+.petshop .info-store {
+  cursor: pointer;
+  border: 0px solid;
+  padding: 5px;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.petshop .info-store:hover {
+  background: #182135;
+  color: #fff;
+}
+
+.petshop .title-company {
+  margin: 0px 0px 14px 0px;
+  padding: 0px;
+}
+
+.petshop .info-company {
+  margin: 0px 0px 14px 0px;
+  width: 250px;
+}
+
+.petshop .info-company span {
+  color: #626264;
+}
+
+.petshop .free-shipping {
+  background: rgba(80, 62, 157, 0.1);
+  color: #503e9d;
+  text-align: center;
+  width: 100px;
+  padding: 3px 0px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 14px 0px 0px 0px;
+}
+/* end petshop company */

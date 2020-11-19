@@ -16,9 +16,9 @@ export default function Petshop() {
       <Header />
       <div className="container-fluid mx-4 mb-4">
         <div className="row">
-          <div className="col-2">
+          <div className="col-2 container-company">
             <div style={{ position: 'relative' }}>
-              <img src={ImgCompany} className="img-fluid w-100" />
+              <img src={ImgCompany} className="img-fluid w-100" style={{ borderRadius: '5px' }} />
               <span
                 className="info-store material-icons"
                 data-toggle="modal"

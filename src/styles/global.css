@@ -163,19 +163,36 @@ input[type='date']:disabled {
   border-color: var(--secondary-hover);
 }
 
-.title-company {
+/* petsho company */
+.container-company .info-store {
+  cursor: pointer;
+  border: 0px solid;
+  padding: 5px;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.container-company .info-store:hover {
+  background: #182135;
+  color: #fff;
+}
+
+.container-company .title-company {
   margin: 12px 0px;
 }
 
-.info-company {
+.container-company .info-company {
   margin: 8px 0px;
 }
 
-.info-company span {
+.container-company .info-company span {
   color: #626264;
 }
 
-.free-shipping {
+.container-company .free-shipping {
   background: rgba(80, 62, 157, 0.1);
   color: #503e9d;
   text-align: center;
@@ -186,6 +203,7 @@ input[type='date']:disabled {
   font-weight: 600;
   font-size: 14px;
 }
+/* end petshop company */
 
 .box-grid-product {
   width: 253px;
@@ -303,22 +321,6 @@ input[type='date']:disabled {
   border-radius: 4px;
   font-weight: 600;
   font-size: 16px;
-}
-
-.info-store {
-  cursor: pointer;
-  border: 0px solid;
-  padding: 5px;
-  border-radius: 50%;
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.info-store:hover {
-  background: #182135;
-  color: #fff;
 }
 
 /* Slide */
