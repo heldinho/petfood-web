@@ -1,4 +1,8 @@
 /* petsho company */
+.petshop {
+  list-style: none;
+}
+
 .petshop .box-image {
   position: relative;
   width: 110px;
