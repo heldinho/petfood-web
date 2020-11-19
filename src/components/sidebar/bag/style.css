@@ -123,7 +123,7 @@
   padding: 0px 25px 25px 25px;
   margin: 0;
   overflow: hidden scroll;
-  max-height: calc(100vh - 191px);
+  max-height: calc(100% - 191px);
 }
 
 .container-bag .list-products-bag .box-product {

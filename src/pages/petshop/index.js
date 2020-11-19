@@ -2,6 +2,7 @@ import React from 'react'
 
 import Header from '../../components/header'
 import Product from '../../components/product/grid'
+import SidebarBag from '../../components/sidebar/bag'
 
 import ImgCompany from '../../assets/petlove.png'
 import star from '../../assets/star.png'
@@ -11,6 +12,7 @@ import distancia from '../../assets/distancia.png'
 export default function Petshop() {
   return (
     <div className="h-100">
+      <SidebarBag />
       <Header />
       <div className="container-fluid mx-4 mb-4">
         <div className="row">

@@ -5,7 +5,7 @@ import Logo from '../../assets/logo.png'
 
 import './style.css'
 
-export default function Header({ whiteVersion }) {
+export default function Header({ whiteVersion, hideCart }) {
   function fnBag(e) {
     // if (e.altKey) {}
     const event = new CustomEvent('openCart')
@@ -23,12 +23,16 @@ export default function Header({ whiteVersion }) {
           }
         >
           <img src={whiteVersion ? LogoWhite : Logo} className="img-fluid" />
-          <span
-            className="material-icons navbar-icon-bag"
-            onClick={(e) => fnBag(e)}
-          >
-            shopping_bag
-          </span>
+        {
+          !hideCart ?
+            <span
+              className="material-icons navbar-icon-bag"
+              onClick={(e) => fnBag(e)}
+            >
+              shopping_bag
+            </span>
+          : false
+        }
         </header>
       </div>
     </div>

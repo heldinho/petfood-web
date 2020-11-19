@@ -87,12 +87,12 @@ input[type='date']:disabled {
   color: #182135;
 }
 
-.container-bag {
+.container-bag-checkout {
   display: flex;
   justify-content: flex-end;
 }
 
-.box-bag {
+.container-bag-checkout .box-bag {
   width: 500px;
   max-height: 600px;
   background: #fff;
@@ -102,7 +102,7 @@ input[type='date']:disabled {
   overflow: hidden auto;
 }
 
-.label-count-bag {
+.container-bag-checkout .label-count-bag {
   font-size: 17px;
   color: #182135;
 }

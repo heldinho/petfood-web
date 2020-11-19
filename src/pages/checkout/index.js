@@ -11,7 +11,7 @@ export default function Checkout() {
 
   return (
     <div className="h-100">
-      <Header />
+      <Header hideCart />
       <div className="container mt-4">
         <div className="row">
           <div className="col-6">
@@ -162,7 +162,7 @@ export default function Checkout() {
           {/* Box minha sacola */}
           <div className="col-6">
             <div className="row">
-              <div className="col-12 container-bag">
+              <div className="col-12 container-bag-checkout">
                 <div className="box-bag">
                   <div className="row">
                     <div className="col-12 p-1 mb-3">

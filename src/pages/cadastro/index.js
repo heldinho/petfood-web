@@ -6,7 +6,7 @@ import Illustration from '../../assets/illustration.png'
 const Cadastro = () => {
   return (
     <div className="container-fluid bg-primary" style={{ height: '100%' }}>
-      <Header whiteVersion />
+      <Header whiteVersion hideCart />
       <div className="row">
         <div className="col-6 text-right my-auto">
           <img src={Illustration} className="img-fluid" />
