@@ -6,6 +6,8 @@ import Logo from '../../assets/logo.png'
 import './style.css'
 
 export default function Header({ whiteVersion, hideCart }) {
+  const [cartCount, setCartCount] = React.useState(0)
+
   function fnBag(e) {
     // if (e.altKey) {}
     const event = new CustomEvent('openCart')
@@ -23,16 +25,19 @@ export default function Header({ whiteVersion, hideCart }) {
           }
         >
           <img src={whiteVersion ? LogoWhite : Logo} className="img-fluid" />
-        {
-          !hideCart ?
-            <span
-              className="material-icons navbar-icon-bag"
-              onClick={(e) => fnBag(e)}
-            >
-              shopping_bag
-            </span>
-          : false
-        }
+          {!hideCart ? (
+            <div className="box-icon-bttn-bag">
+              <span
+                className="material-icons navbar-icon-bag"
+                onClick={(e) => fnBag(e)}
+              >
+                shopping_bag
+              </span>
+              <span className="badge badge-primary badge-bag-count">{cartCount ? cartCount : ''}</span>
+            </div>
+          ) : (
+            false
+          )}
         </header>
       </div>
     </div>

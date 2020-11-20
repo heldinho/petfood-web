@@ -5,14 +5,28 @@ header.no-white-version {
   background: #fff;
 }
 
-.navbar-icon-bag {
+.box-icon-bttn-bag {
   position: relative;
-  padding: 10px;
-  border-radius: 50%;
+  border: 0px solid;
+  width: 60px;
   float: right;
 }
 
-.navbar-icon-bag:hover {
+.box-icon-bttn-bag .badge-bag-count {
+  position: absolute;
+  right: 1px;
+  box-shadow: 1px 1px 5px 0px #ccc;
+}
+
+.box-icon-bttn-bag .navbar-icon-bag {
+  position: relative;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 35px;
+  margin-top: -5px;
+}
+
+.box-icon-bttn-bag .navbar-icon-bag:hover {
   background: rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
