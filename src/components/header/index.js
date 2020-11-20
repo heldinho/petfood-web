@@ -8,6 +8,12 @@ import './style.css'
 export default function Header({ whiteVersion, hideCart }) {
   const [cartCount, setCartCount] = React.useState(0)
 
+  React.useEffect(() => {
+    window.addEventListener('cartCount', () => {
+      setCartCount(cartCount + 1)
+    })
+  }, [cartCount])
+
   function fnBag(e) {
     // if (e.altKey) {}
     const event = new CustomEvent('openCart')
@@ -33,7 +39,9 @@ export default function Header({ whiteVersion, hideCart }) {
               >
                 shopping_bag
               </span>
-              <span className="badge badge-primary badge-bag-count">{cartCount ? cartCount : ''}</span>
+              <span className="badge badge-primary badge-bag-count">
+                {cartCount ? cartCount : ''}
+              </span>
             </div>
           ) : (
             false

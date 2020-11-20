@@ -33,16 +33,14 @@ export default function Bag() {
           <span>
             <strong>Total</strong>
           </span>
-          <span>
-            <strong>R$100,00</strong>
-          </span>
+          <span className="cart-subtotal">R$100,00</span>
         </div>
         <div className="btn-checkout-bag">
           <strong>Finalizar Compra</strong>
         </div>
-        <div className="btn-open-sidebar-bag" onClick={() => setOpen(!open)}>
+        {/* <div className="btn-open-sidebar-bag" onClick={() => setOpen(!open)}>
           <span className="material-icons">shopping_bag</span>
-        </div>
+        </div> */}
       </div>
     </div>
   )

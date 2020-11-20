@@ -7,14 +7,14 @@ import Cadastro from './pages/cadastro'
 import Checkout from './pages/checkout'
 import Petshop from './pages/petshop'
 import Home from './pages/home'
-import ModalCompany from './components/modal/company'
-import ModalProduct from './components/modal/product'
+import SidebarPetshop from './components/sidebar/petshop'
+import SidebarProduct from './components/sidebar/product'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
-    <ModalCompany />
-    <ModalProduct />
+    <SidebarPetshop />
+    <SidebarProduct />
+    <Petshop />
   </React.StrictMode>,
   document.getElementById('root')
 )

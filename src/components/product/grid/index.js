@@ -35,15 +35,25 @@ export default function ProductList(props) {
     }
   }
 
-  function showSlide() {
-    const slides = document.getElementsByClassName('mySlides')
-    for (let i = 0; i < slides.length; i++) {
-      if (i == slideIndex) {
-        slides[i].style.display = 'block'
-      } else {
-        slides[i].style.display = 'none'
-      }
-    }
+  // function showSlide() {
+  //   const slides = document.getElementsByClassName('mySlides')
+  //   for (let i = 0; i < slides.length; i++) {
+  //     if (i == slideIndex) {
+  //       slides[i].style.display = 'block'
+  //     } else {
+  //       slides[i].style.display = 'none'
+  //     }
+  //   }
+  // }
+
+  function addCart() {
+    const event = new CustomEvent('cartCount')
+    window.dispatchEvent(event)
+  }
+
+  function openSidebarProduct() {
+    const event = new CustomEvent('openSidebarProduct')
+    window.dispatchEvent(event)
   }
 
   return (
@@ -76,13 +86,12 @@ export default function ProductList(props) {
           <span className="material-icons">keyboard_arrow_right</span>
         </button>
 
-        <button className="btn-add-product">
+        <button className="btn-add-product" onClick={() => addCart()}>
           <span>+</span>
         </button>
         <button
           className="product-quickview"
-          data-toggle="modal"
-          data-target="#modal-product"
+          onClick={() => openSidebarProduct()}
         >
           <span className="material-icons">remove_red_eye</span>
         </button>

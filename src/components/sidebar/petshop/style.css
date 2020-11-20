@@ -1,0 +1,62 @@
+.box-sidebar-petshop {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 0vh;
+  background: #fff;
+  z-index: 1100;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.box-sidebar-petshop.show {
+  height: 100vh;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.box-sidebar-petshop .header-sidebar-petshop {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-sidebar-petshop .header-sidebar-petshop .title-sidebar-petshop {
+  border: 0px solid;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.box-sidebar-petshop .header-sidebar-petshop .close-sidebar-petshop {
+  border: 0px solid;
+  margin-right: 20px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.box-sidebar-petshop .header-sidebar-petshop .close-sidebar-petshop:hover {
+  color: #000;
+}
+
+.box-sidebar-petshop .body-sidebar-petshop {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 140px);
+}
+
+.box-sidebar-petshop .footer-sidebar-petshop {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  border-top: 1px solid rgb(238, 238, 238);
+}
