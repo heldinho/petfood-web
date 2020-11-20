@@ -5,6 +5,7 @@ import './style.css'
 import Header from '../../components/header'
 import SidebarBag from '../../components/sidebar/bag'
 import Petshop from '../../components/petshop'
+import Map from '../../components/map'
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
           }
         </ul>
       </div>
+      <Map />
     </div>
   )
 }

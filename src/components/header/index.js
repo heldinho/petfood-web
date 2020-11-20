@@ -21,7 +21,7 @@ export default function Header({ whiteVersion, hideCart }) {
   }
 
   return (
-    <div className="row mb-5">
+    <div className="row">
       <div className="col-12 py-0">
         <header
           className={

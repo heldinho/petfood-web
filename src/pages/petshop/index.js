@@ -20,7 +20,7 @@ export default function Petshop() {
     <div className="h-100">
       <SidebarBag />
       <Header />
-      <div className="container-fluid mx-4 mb-4">
+      <div className="container-fluid m-4">
         <div className="row">
           <div className="col-2 container-company">
             <div style={{ position: 'relative' }}>

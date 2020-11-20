@@ -1,6 +1,7 @@
 /* petsho company */
 .petshop {
   list-style: none;
+  margin-left: 14px;
 }
 
 .petshop .box-image {

@@ -8,6 +8,12 @@ import dolar from '../../assets/dolar.png'
 import distancia from '../../assets/distancia.png'
 
 export default function Petshop() {
+
+  function openSidebarPetshop() {
+    const event = new CustomEvent('openSidebarPetshop')
+    window.dispatchEvent(event)
+  }
+
   return (
     <li className="petshop d-inline-block mr-4 my-4">
       <div className="d-flex">
@@ -15,8 +21,7 @@ export default function Petshop() {
           <img src={ImgCompany} className="img-fluid w-100" />
           <span
             className="info-store material-icons"
-            data-toggle="modal"
-            data-target="#modal-company"
+            onClick={() => openSidebarPetshop()}
           >
             store
           </span>

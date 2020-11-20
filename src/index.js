@@ -14,7 +14,7 @@ ReactDOM.render(
   <React.StrictMode>
     <SidebarPetshop />
     <SidebarProduct />
-    <Petshop />
+    <Home />
   </React.StrictMode>,
   document.getElementById('root')
 )
