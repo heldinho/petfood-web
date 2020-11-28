@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import LogoWhite from '../../assets/logo-white.png'
 import Logo from '../../assets/logo.png'
@@ -30,7 +31,9 @@ export default function Header({ whiteVersion, hideCart }) {
               : 'p-4 text-center'
           }
         >
-          <img src={whiteVersion ? LogoWhite : Logo} className="img-fluid" />
+          <Link to="/">
+            <img src={whiteVersion ? LogoWhite : Logo} className="img-fluid" />
+          </Link>
           {!hideCart ? (
             <div className="box-icon-bttn-bag">
               <span

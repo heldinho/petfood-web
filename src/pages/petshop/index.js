@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Header from '../../components/header'
 import Product from '../../components/product/grid'
-import SidebarBag from '../../components/sidebar/bag'
+import SidebarCart from '../../components/sidebar/cart'
 
 import ImgCompany from '../../assets/petlove.png'
 import star from '../../assets/star.png'
 import dolar from '../../assets/dolar.png'
 import distancia from '../../assets/distancia.png'
 
-export default function Petshop() {
+export default function Petshop(props) {
+  const { id } = props.match.params
+
+  useEffect(() => {
+    console.log(id)
+  })
 
   function openSidebarPetshop() {
     const event = new CustomEvent('openSidebarPetshop')
@@ -18,7 +23,7 @@ export default function Petshop() {
 
   return (
     <div className="h-100">
-      <SidebarBag />
+      <SidebarCart />
       <Header />
       <div className="container-fluid m-4">
         <div className="row">

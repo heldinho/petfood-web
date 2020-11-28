@@ -3,14 +3,14 @@ import React from 'react'
 import './style.css'
 
 import Header from '../../components/header'
-import SidebarBag from '../../components/sidebar/bag'
+import SidebarCart from '../../components/sidebar/cart'
 import Petshop from '../../components/petshop'
 import Map from '../../components/map'
 
 export default function Home() {
   return (
     <div className="h-100">
-      <SidebarBag />
+      <SidebarCart />
       <Header />
       <div className="container-fluid petshop-list-container">
         <div className="col-12 text-center">
