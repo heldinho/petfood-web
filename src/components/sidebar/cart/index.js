@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Product from '../../product/list'
 
@@ -39,9 +40,11 @@ export default function Bag() {
           <div className="btn-clear-bag">
             <strong>Limpar Sacola</strong>
           </div>
-          <div className="btn-checkout-bag">
-            <strong>Finalizar Compra</strong>
-          </div>
+          <Link to="/checkout" className="btn-checkout-bag">
+            <div>
+              <strong>Finalizar Compra</strong>
+            </div>
+          </Link>
         </div>
         {/* <div className="btn-open-sidebar-bag" onClick={() => setOpen(!open)}>
           <span className="material-icons">shopping_bag</span>

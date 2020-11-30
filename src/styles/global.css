@@ -21,6 +21,13 @@ input[type='date'] {
   box-shadow: none !important;
 }
 
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='date']:focus {
+  border-color: var(--primary) !important;
+}
+
 input[type='text'],
 input[type='email'],
 input[type='password'],
@@ -59,7 +66,7 @@ input[type='date']:disabled {
 .btn-primary:disabled,
 .btn-primary:hover {
   background-color: var(--primary) !important;
-  border-color: var(--primary);
+  border-color: var(--primary) !important;
 }
 
 .bg-primary {

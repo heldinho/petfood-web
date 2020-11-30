@@ -161,6 +161,7 @@
   background: #fff;
   color: #aaa;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .container-bag .btn-clear-bag:active {
@@ -181,6 +182,7 @@
   background: var(--primary);
   color: #fff;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .container-bag .btn-checkout-bag:active {

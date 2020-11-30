@@ -1,13 +1,11 @@
 import React from 'react'
+import { mask } from 'remask'
 
 import Header from '../../components/header'
 import Product from '../../components/product/list'
 
 export default function Checkout() {
-
-  const products = [
-
-  ]
+  const products = []
 
   return (
     <div className="h-100">
