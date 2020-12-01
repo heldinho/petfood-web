@@ -8,7 +8,7 @@ import './style.css'
 
 export default function Header({ whiteVersion, hideCart }) {
   const [cartCount, setCartCount] = useState(0)
-  const [scrollY, setScrollY] = useState(window.scrollY)
+  const [scrollY, setScrollY] = useState(document.body.scrollTop)
 
   useEffect(() => {
     window.addEventListener('cartCount', () => {
@@ -22,13 +22,13 @@ export default function Header({ whiteVersion, hideCart }) {
   }
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY)
+    const handleScroll = () => setScrollY(document.body.scrollTop)
     window.addEventListener('scroll', handleScroll())
     return () => window.removeEventListener('scroll', handleScroll())
-  }, [document.scrollY])
+  }, [scrollY])
 
   return (
-    <div id="header" className={scrollY > 20 ? 'row active' : 'row'}>
+    <div id="header" className={scrollY > 20 ? 'row active' : 'row active'}>
       <div className="col-12 p-0">
         <header
           className={
