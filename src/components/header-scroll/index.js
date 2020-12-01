@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import useScrollPosition from '@react-hook/window-scroll'
 
 import LogoWhite from '../../assets/logo-white.png'
 import Logo from '../../assets/logo.png'
@@ -9,8 +8,7 @@ import './style.css'
 
 export default function Header({ whiteVersion, hideCart }) {
   const [cartCount, setCartCount] = useState(0)
-
-  const scroll = useScrollPosition(60)
+  const [scrollY, setScrollY] = useState(window.scrollY)
 
   useEffect(() => {
     window.addEventListener('cartCount', () => {
@@ -23,8 +21,14 @@ export default function Header({ whiteVersion, hideCart }) {
     window.dispatchEvent(event)
   }
 
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY)
+    window.addEventListener('scroll', handleScroll())
+    return () => window.removeEventListener('scroll', handleScroll())
+  }, [document.scrollY])
+
   return (
-    <div id="header" className={scroll > 20 ? 'row active' : 'row'}>
+    <div id="header" className={scrollY > 20 ? 'row active' : 'row'}>
       <div className="col-12 p-0">
         <header
           className={
