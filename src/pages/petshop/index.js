@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 
 import Header from '../../components/header'
+import HeaderScroll from '../../components/header-scroll'
 import Product from '../../components/product/grid'
 import SidebarCart from '../../components/sidebar/cart'
 
@@ -25,11 +26,16 @@ export default function Petshop(props) {
     <div className="h-100">
       <SidebarCart />
       <Header />
+      <HeaderScroll />
       <div className="container-fluid m-4">
         <div className="row">
           <div className="col-2 container-company">
             <div style={{ position: 'relative' }}>
-              <img src={ImgCompany} className="img-fluid w-100" style={{ borderRadius: '5px' }} />
+              <img
+                src={ImgCompany}
+                className="img-fluid w-100"
+                style={{ borderRadius: '5px' }}
+              />
               <span
                 className="info-store material-icons"
                 onClick={() => openSidebarPetshop()}
