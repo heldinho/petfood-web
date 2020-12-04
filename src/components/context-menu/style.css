@@ -1,0 +1,29 @@
+@import url('../../styles/variables.css');
+
+.box-context-menu {
+  position: absolute;
+  width: 300px;
+  border: 0px solid;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.box-context-menu .ul-context-menu {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.box-context-menu .ul-context-menu .li-context-menu {
+  padding: 13px 20px;
+  cursor: pointer;
+}
+
+.box-context-menu .ul-context-menu .li-context-menu:hover {
+  background-color: var(--primary);
+  color: #fff;
+}

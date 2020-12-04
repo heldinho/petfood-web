@@ -1,12 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import ImgProduct from '../../../assets/product.png'
+import ContextMenu from '../../context-menu'
 
 export default function ProductList() {
-  React.useEffect(() => {
-    // console.log('useEffect')
-  }, [])
-
   return (
     <div className="box-product">
       <img src={ImgProduct} className="img-fluid" />

@@ -1,11 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { mask } from 'remask'
 
 import Header from '../../components/header'
 import Product from '../../components/product/list'
+import ContextMenu from '../../components/context-menu'
 
 export default function Checkout() {
+  const [position, setPosition] = useState({})
   const products = []
+
+  const onClickRight = (e) => {
+    e.preventDefault()
+    const element = document.getElementsByClassName('title-form-checkout')
+    element.onselectstart = new Function('return false')
+    element.oncontextmenu = new Function('return false')
+    setPosition({ x: e.clientX, y: e.clientY })
+    const event = new CustomEvent('open-context-menu-open')
+    window.dispatchEvent(event)
+  }
+
+  useEffect(() => {
+    document.addEventListener('click', function () {
+      const event = new CustomEvent('open-context-menu-close')
+      window.dispatchEvent(event)
+    })
+  })
 
   return (
     <div className="h-100">
@@ -18,7 +37,10 @@ export default function Checkout() {
               <div className="col-12">
                 <div className="row mb-3">
                   <div className="col-12 pl-1">
-                    <strong className="title-form-checkout">
+                    <strong
+                      className="title-form-checkout"
+                      onContextMenu={onClickRight}
+                    >
                       Dados de Entrega
                     </strong>
                   </div>
@@ -182,6 +204,8 @@ export default function Checkout() {
           </div>
         </div>
       </div>
+
+      <ContextMenu nodePosition={position} />
     </div>
   )
 }
