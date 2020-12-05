@@ -8,7 +8,7 @@ import logo from '../../assets/petlove.png'
 export default function marker() {
   return (
     <div>
-      <img src={MarkerIcon} />
+      <img src={MarkerIconSelected} />
       <img className="img-marker" src={logo} />
     </div>
   )
