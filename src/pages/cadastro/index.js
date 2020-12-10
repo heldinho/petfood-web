@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { setCustomer } from '../../store/modules/shop/actions'
+import { setCustomer as setStoreCustomer } from '../../store/modules/shop/actions'
 
 import Header from '../../components/header'
 import Illustration from '../../assets/illustration.png'
@@ -54,7 +54,7 @@ const Cadastro = () => {
   }
 
   const goToCheckout = (e) => {
-    dispatch(setCustomer(customer))
+    dispatch(setStoreCustomer(customer))
   }
 
   return (
