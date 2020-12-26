@@ -2,7 +2,8 @@ import produce from 'immer'
 import types from './types'
 
 const INITIAL_STATE = {
-  customer: {}
+  customer: {},
+  petshops: []
 }
 
 export default function shop(state = INITIAL_STATE, action) {
@@ -10,6 +11,10 @@ export default function shop(state = INITIAL_STATE, action) {
     case types.SET_CUSTOMER:
       return produce(state, (draft) => {
         draft.customer = action.customer
+      })
+    case types.SET_PETSHOPS:
+      return produce(state, (draft) => {
+        draft.petshops = action.petshops
       })
     default:
       return state
